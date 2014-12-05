@@ -8,8 +8,9 @@ c <- subset(a[b,])
 Realtime <- strptime(paste(c$Date, c$Time), format="%Y-%m-%d %H:%M:%S")
 c$Realtime <- Realtime
 
-png(filename="plot4.png")
 Sys.setlocale("LC_TIME", "English")
+
+png(filename="plot4.png")
 par(mfrow=c(2,2))
 plot(c$Realtime, c$Global_active_power, type="l", xlab="", ylab="Global Active Power")
 plot(c$Realtime, c$Voltage, type="l", xlab="datetime", ylab="Voltage")

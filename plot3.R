@@ -8,6 +8,8 @@ c <- subset(a[b,])
 Realtime <- strptime(paste(c$Date, c$Time), format="%Y-%m-%d %H:%M:%S")
 c$Realtime <- Realtime
 
+Sys.setlocale("LC_TIME", "English")
+
 png(filename="plot3.png")
 plot(c$Realtime, c$Sub_metering_1, type="n", xlab="", ylab="Energy sub metering")
 lines(c$Realtime, c$Sub_metering_1)

@@ -9,6 +9,7 @@ Realtime <- strptime(paste(c$Date, c$Time), format="%Y-%m-%d %H:%M:%S")
 c$Realtime <- Realtime
 
 Sys.setlocale("LC_TIME", "English")
+
 png(filename="plot2.png")
 plot(c$Realtime, c$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 dev.off()
